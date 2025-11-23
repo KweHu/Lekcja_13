@@ -3,8 +3,8 @@ header{
     justify-content: center;
 }
 main{
-    min-height: 78vh;
     display: flex;
+    min-height: 75vh;
 }
 .column{
     flex: 1;
