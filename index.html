@@ -2,50 +2,51 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Tablica 6x6</title>
-    <style>
-		table, td, th {
-            border: 1px solid black;
-            border-collapse: collapse;
-            text-align: center;
-            padding: 10px;
-        }
-		table {
-			width: 300px;
-			height: 300px;
-		}
-        .nieb {
-            background-color: lightblue;
-        }
-		.jziel {
-            background-color: lightgreen;
-        }
-		.ziel {
-            background-color: green;
-        }
-    </style>
+    <meta name="author" content="Paweł Orlik">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lekcja 13 - Tablice HTML</title>
 </head>
 <body>
-    <table>
-        <tr><th class="nieb">1</th><th class="nieb">2</th><th class="nieb">3</th><th class="nieb">4</th><th class="nieb">5</th><th class="nieb">6</th></tr>
-        <tr><th class="nieb">2</th><td>a</td><td class="jziel">b</td><td class="jziel">c</td><td>d</td><td>e</td></tr>
-        <tr><th class="nieb">3</th><td>f</td><td>g</td><td>h</td><td>i</td><td class="jziel">j</td></tr>
-        <tr><th class="nieb">4</th><td>k</td><td>l</td><td>m</td><td>n</td><td class="jziel">o</td></tr>
-        <tr><th class="nieb">5</th><td class="ziel">p</td><td class="ziel">q</td><td class="ziel">r</td><td>s</td><td>t</td></tr>
-        <tr><th class="nieb">6</th><td class="ziel">u</td><td class="ziel">v</td><td class="ziel">w</td><td>y</td><td>z</td></tr>
-	</table><br>
-	<table>
-        <tr><th class="nieb">1</th><th class="nieb">2</th><th class="nieb">3</th><th class="nieb">4</th><th class="nieb">5</th><th class="nieb">6</th></tr>
-        <tr><th class="nieb">2</th><td>a</td><td colspan=2 class="jziel">b, c</td><td>d</td><td>e</td></tr>
-        <tr><th class="nieb">3</th><td>f</td><td>g</td><td>h</td><td>i</td><td rowspan=2 class="jziel">j,o</td></tr>
-        <tr><th class="nieb">4</th><td>k</td><td>l</td><td>m</td><td>n</td></tr>
-        <tr><th class="nieb">5</th><td colspan=3 rowspan=2 class="ziel">p,q,r,u,v,w</td><td>s</td><td>t</td></tr>
-        <tr><th class="nieb">6</th><td>y</td><td>z</td></tr>
-	</table><br>
-	<table>
-        <tr><th class="nieb">1</th><th class="nieb">2</th><th class="nieb">3</th><th class="nieb">4</th><th class="nieb">5</th><th class="nieb">6</th></tr>
-        <tr><th class="nieb">2</th><td>a</td><td class="jziel">b</td><td class="jziel">c</td><td>d</td><td>e</td></tr>
-        <tr><th class="nieb">3</th><td>f</td><td>g</td><td>h</td><td>i</td><td class="jziel">j</td></tr>
-        <tr><th class="nieb">4</th><td colspan=5 rowspan=2 class="ziel">k,l,m,n,o,p,q,r,s,t</td>
-        <tr><th class="nieb">5</th>
-        <tr><th class="nieb">6</th><td>u</td><td>v</td><td>w</td><td>y</td><td>z</td></tr>
+    <header>
+        <h1>Lekcja 13- Tablice HTML</h1>
+    </header><hr>
+    <main>
+        <section class="column">
+        <br><h2>Tabela domyślna</h2>
+        <table>
+            <tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
+            <tr><th>2</th><td>a</td><td class="lgreen">b</td><td class="lgreen">c</td><td>d</td><td>e</td></tr>
+            <tr><th>3</th><td>f</td><td>g</td><td>h</td><td>i</td><td class="lgreen">j</td></tr>
+            <tr><th>4</th><td>k</td><td>l</td><td>m</td><td>n</td><td class="lgreen">o</td></tr>
+            <tr><th>5</th><td class="green">p</td><td class="green">q</td><td class="green">r</td><td>s</td><td>t</td></tr>
+            <tr><th>6</th><td class="green">u</td><td class="green">v</td><td class="green">w</td><td>y</td><td>z</td></tr>
+	    </table>
+        </section>
+        <section class="column">
+        <h2>Tabela po scaleniu<br>komórek wg. kolorów</h2>
+	    <table>
+            <tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
+            <tr><th>2</th><td>a</td><td colspan=2 class="lgreen">b, c</td><td>d</td><td>e</td></tr>
+            <tr><th>3</th><td>f</td><td>g</td><td>h</td><td>i</td><td rowspan=2 class="lgreen">j,o</td></tr>
+            <tr><th>4</th><td>k</td><td>l</td><td>m</td><td>n</td></tr>
+            <tr><th>5</th><td colspan=3 rowspan=2 class="green">p,q,r,u,v,w</td><td>s</td><td>t</td></tr>
+            <tr><th>6</th><td>y</td><td>z</td></tr>
+	    </table>
+        </section>
+        <section>
+        <h2>Tabela po scaleniu komórek<br>inicjałów i użycia koloru zielonego</h2>
+	    <table class="column">
+            <tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
+            <tr><th>2</th><td>a</td><td class="lgreen">b</td><td class="lgreen">c</td><td>d</td><td>e</td></tr>
+            <tr><th>3</th><td>f</td><td>g</td><td>h</td><td>i</td><td class="lgreen">j</td></tr>
+            <tr><th>4</th><td colspan=5 rowspan=2 class="green">k,l,m,n,o,p,q,r,s,t</td></tr>
+            <tr><th>5</th></tr>
+            <tr><th>6</th><td>u</td><td>v</td><td>w</td><td>y</td><td>z</td></tr>
+        </table>
+        </section>
+    </main><hr>
+    <footer>
+        <a href="https://kwehu.github.io/MainPage/">Strona główna</a><span>Autor: Paweł Orlik</span>
+    </footer>
+</body>
+</html>

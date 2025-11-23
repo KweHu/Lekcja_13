@@ -1,0 +1,34 @@
+header{
+    display: flex;
+    justify-content: center;
+}
+main{
+    min-height: 78vh;
+    display: flex;
+}
+.column{
+    flex: 1;
+}
+table, td, th{
+border: 1px solid black;
+border-collapse: collapse;
+text-align: center;
+padding: 10px;
+}
+table{
+	width: 300px;
+	height: 300px;
+}
+th{
+    background-color: lightblue;
+}
+.lgreen{
+    background-color: lightgreen;
+}
+.green{
+    background-color: green;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+}
